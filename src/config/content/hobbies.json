@@ -1,0 +1,35 @@
+[
+    {
+        "id": 0,
+        "smallWidth": "6rem",
+        "largeWidth": "8rem",
+        "smallHeight": "6rem",
+        "largeHeight": "8rem",
+        "strokeWidth": "8",
+        "viewBox": "0 0 512 512",
+        "transform": null,
+        "animationDuration": 7
+    },
+    {
+        "id": 1,
+        "smallWidth": "6rem",
+        "largeWidth": "8rem",
+        "smallHeight": "6rem",
+        "largeHeight": "8rem",
+        "strokeWidth": "8",
+        "viewBox": "0 0 512 512",
+        "transform": null,
+        "animationDuration": 7
+    },
+    {
+        "id": 2,
+        "smallWidth": "6rem",
+        "largeWidth": "8rem",
+        "smallHeight": "6rem",
+        "largeHeight": "8rem",
+        "strokeWidth": "6",
+        "viewBox": "0 0 512 512",
+        "transform": null,
+        "animationDuration": 7
+    }
+]

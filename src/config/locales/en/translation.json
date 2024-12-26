@@ -1,0 +1,84 @@
+{
+    "hero": {
+        "title": "Hi! I'm Woo Jin.",
+        "text": "Full stack developer with a passion for problem solving",
+        "wakatime": {
+            "loading": "Loading coding stats...",
+            "prefix": "I coded",
+            "hours": "hours",
+            "minutes": "minutes",
+            "suffix": "this week!",
+            "powered": "powered by WakaTime"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "text": "Hello! I've been building different types of web and mobile applications since I graduated. Listed below are some of the languages and technologies that I have experience using."
+    },
+    "experience": {
+        "title": "Experience",
+        "text": "Since graduating from university in 2022, I've been developing various applications and sharpening my skills.",
+        "content": [
+            {
+                "company": "",
+                "jobTitle": "B.S. in Software Engineering",
+                "description": "Completed coursework involving algorithms, data structures and general programming concepts"
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "text": "Here are a few of my favorite projects that I have built over the past few years!",
+        "content": [
+            {
+                "description": "Youtube clone app made with Node.js/React. Uses FFMPEG and AWS S3 for HLS video streaming."
+            },
+            {
+                "description": "Chess bot that connects to the lichess api and generates moves using a local chess engine."
+            },
+            {
+                "description": "Discord bot with various features."
+            },
+            {
+                "description": "An improved version of my very first project, a website to help with lifting. Currently under development!"
+            }
+        ]
+    },
+    "hobbies": {
+        "title": "Hobbies",
+        "text": "Aside from developing, these are the things that I do for fun!",
+        "content": [
+            {
+                "name": "Starcraft II",
+                "description": "Former Starcraft II professional gamer"
+            },
+            {
+                "name": "Chess",
+                "description": "I enjoy chess as a game of problem solving, much like programming."
+            },
+            {
+                "name": "Weightlifting",
+                "description": "I enjoy weightlifting to clear my mind."
+            }
+        ]
+    },
+    "navbar": {
+        "content": [
+            {
+                "name": "About"
+            },
+            {
+                "name": "Experience"
+            },
+            {
+                "name": "Projects"
+            },
+            {
+                "name": "Hobbies"
+            }
+        ]
+    },
+    "resume": "Resume",
+    "resumelink": "/Woo Jin Kim Resume.pdf",
+    "source": "View source code"
+}

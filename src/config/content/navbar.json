@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "route": "About"
+    },
+    {
+        "id": 1,
+        "route": "Experience"
+    },
+    {
+        "id": 2,
+        "route": "Projects"
+    },
+    {
+        "id": 3,
+        "route": "Hobbies"
+    }
+]
