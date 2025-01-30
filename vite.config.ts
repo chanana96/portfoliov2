@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+    base: "./",
     plugins: [react()],
     server: {
         port: 3000,
@@ -20,6 +21,26 @@ export default defineConfig({
             "@hooks": path.resolve(__dirname, "./src/hooks"),
             "contexts": path.resolve(__dirname, "./src/contexts"),
             "styles": path.resolve(__dirname, "./src/styles"),
+        },
+    },
+    build: {
+        assetsDir: "assets",
+        rollupOptions: {
+            output: {
+                assetFileNames: (assetInfo) => {
+                    // Keep the original names for images in the public directory
+                    const info = assetInfo.name as string;
+                    if (info.endsWith(".png")) {
+                        return "images/[name].[ext]";
+                    }
+                    return "assets/[name]-[hash].[ext]";
+                },
+                manualChunks: {
+                    "react-vendor": ["react", "react-dom"],
+                    "mui-vendor": ["@mui/material", "@mui/system"],
+                    "router-vendor": ["react-router-dom"],
+                },
+            },
         },
     },
 });

@@ -53,7 +53,7 @@ const StyledHobbiesGridItem = styled(Grid)`
     max-width: 400px;
 `;
 
-const pathVariants = (animationDuration) => ({
+const pathVariants = (animationDuration: number) => ({
     hidden: {
         opacity: 0.5,
         pathLength: 0,

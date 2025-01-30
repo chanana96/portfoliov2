@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "Lobstertube",
-        "image": "./images/0.png",
+        "image": "/images/0.png",
         "skills": ["React", "Node.js", "Express", "SQL", "FFMPEG", "Redis", "JWT", "AWS S3"],
         "websiteLink": "",
         "githubLink": "https://github.com/chanana96/lobstertube"
@@ -10,7 +10,7 @@
     {
         "id": 1,
         "title": "Chess analysis bot",
-        "image": "./images/1.png",
+        "image": "/images/1.png",
         "skills": ["Express", "Node.js", "Axios"],
         "websiteLink": "",
         "githubLink": "https://github.com/chanana96/lichessopeningtrainer"
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "title": "Discord bot",
-        "image": "./images/2.png",
+        "image": "/images/2.png",
         "skills": ["Node.js", "Discord.js", "Redis", "Express", "Axios", "MongoDB"],
         "websiteLink": "",
         "githubLink": "https://github.com/chanana96/JanuaryBot"
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "title": "Lifthelper 2",
-        "image": "./images/3.png",
+        "image": "/images/3.png",
         "skills": ["ASP.NET Core", "SQL Server", "React", "Three.js", "Tailwindcss"],
         "websiteLink": "",
         "githubLink": "https://github.com/chanana96/LiftHelper2"

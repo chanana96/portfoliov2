@@ -37,7 +37,7 @@ export const StyledGenericTitle = styled(Typography)`
 `;
 
 export const StyledGenericSubText = styled(Typography)`
-    color: ${({ theme }) => theme.palette.text.primary};
+    color: ${({ theme }) => theme.palette.text.secondary};
     font-size: clamp(20px, 2vw, 26px) !important;
     text-align: center;
     animation: fadeInUp;

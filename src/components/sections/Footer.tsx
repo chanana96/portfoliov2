@@ -111,7 +111,7 @@ export const Footer = () => {
                 )}
             </div>
             <StyledSourceLink
-                href="https://github.com/chanana96/portfolio"
+                href="https://github.com/chanana96/portfoliov2"
                 target="_blank"
                 rel="noopener noreferrer"
             >

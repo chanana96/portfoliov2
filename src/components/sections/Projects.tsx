@@ -10,11 +10,15 @@ import "animate.css";
 import { useInView, InView } from "react-intersection-observer";
 import * as Scroll from "react-scroll";
 import projects from "@config/content/projects.json";
-
+import { useState } from "react";
 import LaunchIcon from "@mui/icons-material/Launch";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTranslation } from "react-i18next";
 
+interface StyledProjectsGridItemProps {
+    inView?: boolean;
+    isActive?: boolean;
+}
 const StyledProjectsContainer = styled(Container)`
     margin-top: 3rem;
     display: flex;
@@ -44,7 +48,7 @@ interface StyledProjectsGridItemProps {
 }
 
 const StyledProjectsGridItem = styled(Grid, {
-    shouldForwardProp: (prop) => prop !== "inView",
+    shouldForwardProp: (prop) => !["inView", "isActive"].includes(prop as string),
 })<StyledProjectsGridItemProps>`
     position: relative;
     display: flex;
@@ -52,7 +56,7 @@ const StyledProjectsGridItem = styled(Grid, {
     margin-bottom: 2.5rem;
     border-radius: 1rem;
     border: ${({ theme }) => `0.25rem solid ${theme.palette.secondary.main}70`};
-    background-color: ${({ theme }) => `${theme.palette.secondary.main}70`};
+    background-color: ${({ theme }) => `${theme.palette.background.default}70`};
 
     padding-top: 0 !important;
     padding-left: 0 !important;
@@ -60,10 +64,20 @@ const StyledProjectsGridItem = styled(Grid, {
     align-items: flex-end;
     transform: none;
     transition: transform 150ms ease-in-out 0s;
-    &:hover {
-        transform: scale(1.02);
-        transition: transform 150ms ease-in-out 0s;
-        ${({ theme }) => theme.breakpoints.up("md")} {
+
+    ${({ theme }) => theme.breakpoints.up("md")} {
+        &:hover {
+            transform: scale(1.02);
+            transition: transform 150ms ease-in-out 0s;
+
+            &::after {
+                opacity: 0.9;
+                content: "";
+                position: absolute;
+                inset: 0px;
+                background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 70%);
+            }
+
             & div {
                 opacity: 1;
                 transform: translateY(-10%);
@@ -72,13 +86,27 @@ const StyledProjectsGridItem = styled(Grid, {
                     transform 300ms ease-in-out 0s;
             }
         }
-        &::after {
-            opacity: 0.9 !important;
-            content: "";
-            position: absolute;
-            inset: 0px;
-            background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 70%);
-        }
+    }
+
+    ${({ theme, isActive }) => theme.breakpoints.down("md")} {
+        ${({ isActive }) =>
+            isActive &&
+            `
+            transform: scale(1.02);
+            
+            &::after {
+                opacity: 0.9;
+                content: "";
+                position: absolute;
+                inset: 0px;
+                background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 70%);
+            }
+
+            & div {
+                opacity: 1;
+                transform: translateY(-10%);
+            }
+        `}
     }
 `;
 const StyledProjectsImg = styled("img")(({ theme }) => ({
@@ -168,6 +196,10 @@ export const Projects = () => {
         triggerOnce: true,
     });
     const { t } = useTranslation();
+    const [activeProjectId, setActiveProjectId] = useState<number | null>(null);
+    const handleProjectClick = (projectId: number) => {
+        setActiveProjectId(activeProjectId === projectId ? null : projectId);
+    };
 
     return (
         <Scroll.Element name="Projects">
@@ -197,6 +229,8 @@ export const Projects = () => {
                                         sm={5.5}
                                         ref={ref}
                                         inView={inView}
+                                        isActive={activeProjectId === project.id}
+                                        onClick={() => handleProjectClick(project.id)}
                                         sx={
                                             inView
                                                 ? {

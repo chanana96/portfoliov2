@@ -55,7 +55,7 @@ const StyledHeroImage = styled("img")`
     width: 270px;
     border-radius: 2rem;
     border: ${({ theme }) => `0.3rem solid ${theme.palette.secondary.main}90`};
-    background-color: ${({ theme }) => `${theme.palette.secondary.main}70`};
+    background-color: ${({ theme }) => `${theme.palette.background.default}70`};
     text-align: center;
     margin: 2rem 4rem 2rem 4rem;
     ${({ theme }) => theme.breakpoints.down("lg")} {
@@ -92,6 +92,9 @@ const StyledHeroTitle = styled(Typography)`
 const StyledHeroSubText = styled(Typography)`
     color: ${({ theme }) => theme.palette.text.secondary} !important;
     font-size: clamp(20px, 2vw, 26px) !important;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
 `;
 
 const ScrollerIcon = styled("div")`
@@ -126,12 +129,12 @@ const ScrollerIcon = styled("div")`
 const StyledTimeStats = styled("span")`
     position: relative;
     cursor: help;
-    font-weight: 600; // Make it slightly bolder
-    color: ${({ theme }) => theme.palette.primary.main}
+    font-weight: 600;
+    color: ${({ theme }) => theme.palette.text.secondary}
     transition: color 0.2s ease;
 
     &:hover {
-        color: ${({ theme }) => theme.palette.primary.light};
+        color: ${({ theme }) => theme.palette.action.hover};
     }
     &:hover::after {
         content: "powered by WakaTime";
@@ -145,7 +148,7 @@ const StyledTimeStats = styled("span")`
         color: ${({ theme }) => theme.palette.text.secondary};
     }
 `;
-export const Hero = ({ img }) => {
+export const Hero = ({ img }: { img: string }) => {
     const [isMobile, setIsMobile] = useState(false);
     const { timeStats, loading, error } = useWakaTime();
     useEffect(() => {

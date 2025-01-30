@@ -8,20 +8,19 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-    Button,
-    Typography,
-    Drawer,
-    AppBar,
-    Toolbar,
-    Box,
-    List,
-    useMediaQuery,
-    useTheme,
-    useScrollTrigger,
-    Slide,
-    styled,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Drawer from "@mui/material/Drawer";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/material/styles/useTheme";
+import { styled } from "@mui/material/styles";
+import Slide from "@mui/material/Slide";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
@@ -59,9 +58,9 @@ const StyledAppBarLink = styled(Link)`
         transition: transform 150ms ease-in-out 0s !important;
         cursor: pointer;
         font-size: 1.2rem;
-        padding: 0.5rem;
+        padding: 1rem;
         &:hover {
-            color: ${({ theme }) => theme.palette.text.secondary} !important;
+            color: ${({ theme }) => theme.palette.action.hover} !important;
             transform: translateY(-2px);
         }
     }
@@ -73,7 +72,7 @@ const StyledAppBarButton = styled(Button)`
     transition: transform 150ms ease-in-out 0s !important;
     cursor: pointer;
     &:hover {
-        color: ${({ theme }) => theme.palette.text.secondary} !important;
+        color: ${({ theme }) => theme.palette.action.hover} !important;
         transform: translateY(-2px);
     }
 `;
@@ -86,7 +85,7 @@ const StyledAppBarDrawerLink = styled(Link)`
         font-size: 1.75rem;
         padding: 0;
         &:hover {
-            color: ${({ theme }) => theme.palette.text.secondary} !important;
+            color: ${({ theme }) => theme.palette.action.hover} !important;
         }
     }
 `;
@@ -177,7 +176,7 @@ export const Navbar = () => {
         setIsOpen(isOpen);
     };
     const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
+    const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
     };
 

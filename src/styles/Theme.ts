@@ -50,14 +50,14 @@ export const lightTheme = createTheme({
             default: "#FFFFFF",
         },
         secondary: {
-            main: "#3676b3",
+            main: "#1EA4D9",
         },
         action: {
-            hover: "#3E9F9D",
+            hover: "#22CCF2",
         },
         text: {
-            primary: "#0B132B",
-            secondary: "#3676b3",
+            primary: "#000000",
+            secondary: "#284259",
         },
     },
 });
@@ -112,14 +112,14 @@ export const darkTheme = createTheme({
             default: "#0B132B",
         },
         secondary: {
-            main: "#3A506B",
+            main: "#1EA4D9",
         },
         action: {
-            hover: "#53739A",
+            hover: "#22CCF2",
         },
         text: {
             primary: "#FEFFFF",
-            secondary: "#c8dfdb",
+            secondary: "#9BE2F2",
         },
     },
 });

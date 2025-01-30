@@ -11,7 +11,7 @@ const StyledAnchorLink = styled("a")(({ theme }) => ({
     },
     "&:hover": {
         "& svg": {
-            fill: theme.palette.text.secondary + " !important",
+            fill: theme.palette.action.hover + " !important",
             transform: "scale(1.2)",
         },
     },
