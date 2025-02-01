@@ -41,7 +41,6 @@ const StyledProjectsGrid = styled(Grid)(({ theme }) => ({
     width: "100%",
     marginLeft: "0 !important",
     marginTop: "0 !important",
-    padding: "1rem",
 }));
 interface StyledProjectsGridItemProps {
     inView?: boolean;
@@ -127,7 +126,6 @@ const StyledProjectsTextField = styled("div")(({ theme }) => ({
     textAlign: "left",
     [theme.breakpoints.down("lg")]: {
         transform: "none",
-        padding: "1rem 1rem",
     },
 }));
 const StyledProjectsTitle = styled(Typography)(({ theme }) => ({

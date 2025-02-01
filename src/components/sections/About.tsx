@@ -107,7 +107,27 @@ export const About = () => {
                         <StyledDivider />
                     </StyledGenericTitle>
 
-                    <StyledGenericSubText variant="h1">{t("about.text")}</StyledGenericSubText>
+                    <StyledGenericSubText variant="h1">
+                        <>
+                            {t("about.text")}{" "}
+                            <a
+                                className="no-underline hover:underline"
+                                href="https://hackattic.com/ranking"
+                                target="_blank"
+                            >
+                                {t("about.hyperlinks.Hackattic")}
+                            </a>
+                            {t("about.text2")}
+                            <a
+                                className="no-underline hover:underline"
+                                href="https://www.codewars.com/users/chanana96"
+                                target="_blank"
+                            >
+                                {t("about.hyperlinks.Codewars")}
+                            </a>
+                            {t("about.text3")}
+                        </>
+                    </StyledGenericSubText>
 
                     <StyledScrollingBelt>
                         {[...technologiesArr, ...technologiesArr].map((item, index) => (

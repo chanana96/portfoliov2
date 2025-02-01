@@ -13,7 +13,13 @@
     },
     "about": {
         "title": "About Me",
-        "text": "I've been building different types of web and mobile applications since I graduated. Listed below are some of the languages and technologies that I have experience using."
+        "text": "I've been building various applications since graduating. I also enjoy coding challenges, I'm currently rank 10 on ",
+        "text2": " as the only person in the world to have all solutions posted on Github, and I'm top 14th percentile on ",
+        "text3": "! Listed below are the languages and technologies I love using.",
+        "hyperlinks": {
+            "Hackattic": "Hackattic",
+            "Codewars": "Codewars"
+        }
     },
     "experience": {
         "title": "Experience",
